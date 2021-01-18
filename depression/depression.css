@@ -2,8 +2,6 @@ body{
 	background-color: #242424;
 	margin: 0;
 	font: sans-serif;
-	display: none;
-	//Blog closed to the internet.
 }
 a{
 	text-decoration: none;
