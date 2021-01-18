@@ -1,0 +1,152 @@
+body{
+	background-color: #242424;
+	margin: 0;
+	font: sans-serif;
+	display: none;
+	//Blog closed to the internet.
+}
+a{
+	text-decoration: none;
+}
+a:focus{
+	outline: 3px dashed;
+}
+.first{
+	min-height: 100vh;
+	background-color: slategray;
+	background: linear-gradient(90deg, black, #000000b0);
+}
+.first div{
+	padding-top: 38vh;
+	text-align: center;
+}
+.first div a{
+	color: #80abdb;
+	position: absolute;
+	top: 0;
+	left:0;
+}
+.first img{
+	filter: grayscale(1);
+}
+.headline{
+	margin-top: 38vh;
+	font-size: 4.2rem;
+	padding: 0px 5%;
+	color: #fff;
+}
+.intro{
+	margin: 0px 15%;
+	color: #9bb9d0;
+	font-size: 1rem;
+}
+.date{
+	margin-top: 5vh;
+	color: #7c7c7c;
+}
+.intro span{
+	background-color: #4e5357;
+	white-space: nowrap;
+	padding: 0px 3px;
+}
+.headline::after{
+	text-align: center;
+	content: '';
+	display: block;
+	background: #878787;
+	height: 1px;
+	margin: 10px;
+}
+.second{
+	color: white;
+	height: 100vh;
+}
+.subheadSpecial{
+	top: 40%;
+	position: sticky;
+	position: -webkit-sticky;
+	text-align: center;
+	color: white;
+	margin: 0px;
+	padding-top: 2rem;
+	font-size: 3rem;
+}
+.third{
+	min-height: 200vh;
+	color: snow;
+}
+.third p{
+	text-align: left;
+	padding: 2px 4vw;
+	font-size: large;
+	line-height: 1.8rem;
+}
+.third div{
+	text-align: center;
+	width: 70%;
+	padding-left: 15%;
+	margin-top: 60vh;
+	padding-bottom: 20vh;
+}
+@media(min-width:970px){
+	.first div{
+		float: left;
+		padding: 10px;
+		width: calc(100% - 90vh);
+		max-height: 100vh;
+	}
+	.first img{
+		float: right;
+		height: 100vh;
+	}
+}
+@media (min-width: 450px)and (max-width: 970px){
+	.third div{
+		margin-top: 30%;
+		width:90%;
+		padding-left: 5%;
+	}
+	.first img{
+		display: none;
+	}
+	.second{
+		background-color: gray;
+		background-blend-mode: luminosity ;
+		background-image: url(https://ae01.alicdn.com/kf/H2b1bb31f740f4cfba9aa0cdff6691c9d2.jpg);
+		background-size: cover;
+	}
+	.subheadSpecial{
+		padding: 2rem 10% 4rem 10%;
+	}
+	.first div{
+		width:100%;
+	}
+	.headline{
+		margin-top: 0;
+	}
+}
+@media (max-width: 450px) {
+	.third div{
+		margin-top: 15vh;
+		width: 100%;
+		padding-left: 0;
+	}
+	.first{
+		padding-bottom: 15vh;
+	}
+	.headline{
+		margin-top: 0;
+	}
+	.subheadSpecial{
+		padding: 2rem 10% 2rem 10%;
+	}
+	.first img{
+		display: none;
+	}
+	.second{
+		background-color: gray;
+		background-blend-mode: luminosity ;
+		background-image: url(https://ae01.alicdn.com/kf/H2b1bb31f740f4cfba9aa0cdff6691c9d2.jpg);
+		background-size: cover;
+	}
+}
