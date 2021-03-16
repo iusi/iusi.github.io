@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<title>Index</title>
+		<meta name="theme-color" content="#1a8f8b"/>
+		<meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui" charset="utf-8">
+		<style type="text/css">
+			html,body,section{
+				margin: 0;
+			}
+			a{
+				color: #551A8B;
+			}
+			body{
+				font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+				height: 100vh;
+				background-color: #1a8f8b70;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.en, .zh, .fr, #others{
+				display: none;
+			}
+			@media (prefers-color-scheme: dark){
+				body{
+					background-color: #01343C;
+					color: #C3A388;
+				}
+				a{
+					color: #9943e8;
+				}
+			}
+			@media (orientation: landscape){
+				section{
+					font-size:calc(2em + 1vw);
+				}
+			}
+			@media (orientation: portrait){
+				section{
+					letter-spacing: 1px;
+					line-height: calc(1em + 3vw);
+					margin-top: calc(-2em - 1vw - 5vh);
+					margin-left: 5vw;
+					margin-right: 5vw;
+					text-align: center;
+					flex-wrap: nowrap;
+					font-size: calc(2em + 1vw);
+				}
+				section span{
+					white-space: nowrap;
+				}
+			}
+		</style>
+	</head>
+	<script type="text/javascript">
+		var language = navigator.language
+	</script>
+	<body>
+		 <section id="others">
+			 Default for all other languages
+		 </section>
+		<section lang="zh-CN" class="zh">
+			我们需要一个<span>开放的</span>校园 <br><a href="https://www.zhihu.com/question/448993135" target="_blank"><i> #打开校门</i></a>
+		</section>
+		<section lang="en" class="en">
+			We want to <span>be free</span> from confinement.<br> <a href="https://www.zhihu.com/question/448993135" target="_blank"><i> #OpenTheCampus</i></a>
+		</section>
+		<section lang="fr" class="fr">Nous avons besoin d'un <span>campus libre.<br></span><a href="https://www.zhihu.com/question/448993135" target="_blank"><i>#OuvreLesPortes</i></a></section>
+	</body>
+	<script type="text/javascript">
+		var i;
+		var english = document.getElementsByClassName("en");
+		var chinese = document.getElementsByClassName("zh");
+		var french = document.getElementsByClassName("fr");
+		switch(language){
+		case 'en': case 'en-US': case 'en-us': case 'en-CA': case 'en-ca': case 'en-GB': case 'en-gb':
+		for (i=0; i< english.length; i++){
+			english[i].style.display = "block";
+		}
+		break;
+		case 'zh': case 'zh-CN': case 'zh-cn': case 'zh-Hans':
+		for (i=0; i< chinese.length; i++){
+			chinese[i].style.display = "block";
+		}
+		break;
+		case 'fr': case 'fr-FR': case 'fr-fr': case 'fr-CA': case 'fr-ca':
+		for (i=0; i< french.length; i++){
+			french[i].style.display = "block";
+		}
+		break;
+		default:
+		document.getElementById('others').style.display = "block";
+		}
+	</script>
+</html>
