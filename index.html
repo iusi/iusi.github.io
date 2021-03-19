@@ -3,20 +3,23 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Index</title>
-		<meta name="theme-color" content="#1a8f8b"/>
+		<meta name="theme-color" content="#ffb300"/>
 		<meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui" charset="utf-8">
 		<style type="text/css">
 			html,body,section{
 				margin: 0;
 			}
 			a{
-				color: #551A8B;
+				color: #ffdd76;
+			}
+			a:focus{
+				border: dashed 3px #ffdd76;
 			}
 			body{
-				color: #0363ff;
+				color: white;
 				font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 				height: 100vh;
-				background-color: #1a8f8b70;
+				background-color: #d0556a;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -26,11 +29,11 @@
 			}
 			@media (prefers-color-scheme: dark){
 				body{
-					background-color: #01343C;
-					color: #C3A388;
+					background-color: #2b2627;
+					color: #edede6;
 				}
 				a{
-					color: #9943e8;
+					color: #ecbb26;
 				}
 			}
 			@media (orientation: landscape){
@@ -59,16 +62,13 @@
 		var language = navigator.language
 	</script>
 	<body>
-		 <section id="others">
-			 Default for all other languages
-		 </section>
-		<section lang="zh-CN" class="zh">
-			我们需要一个<span>开放的</span>校园 <br><a href="https://www.zhihu.com/question/448993135" target="_blank"><i> #打开校门</i></a>
+		<section lang="zh-CN" class="zh" id="others">
+			我们需要一个开放的<span>校园</span> <br><a href="https://s.weibo.com/weibo/%25E5%25A4%25A7%25E5%25AD%25A6%25E8%25A7%25A3%25E5%25B0%2581" target="_blank"><i> #打开校门</i></a>
 		</section>
 		<section lang="en" class="en">
-			We want to <span>be free</span> from confinement.<br> <a href="https://www.zhihu.com/question/448993135" target="_blank"><i> #OpenTheCampus</i></a>
+			We want to <span>be free</span> from confinement.<br> <a href="https://s.weibo.com/weibo/%25E5%25A4%25A7%25E5%25AD%25A6%25E8%25A7%25A3%25E5%25B0%2581" target="_blank"><i> #OpenTheCampus</i></a>
 		</section>
-		<section lang="fr" class="fr">Nous avons besoin d'un <span>campus libre.<br></span><a href="https://www.zhihu.com/question/448993135" target="_blank"><i>#OuvreLesPortes</i></a></section>
+		<section lang="fr" class="fr">Nous avons besoin d'un <span>campus libre.<br></span><a href="https://s.weibo.com/weibo/%25E5%25A4%25A7%25E5%25AD%25A6%25E8%25A7%25A3%25E5%25B0%2581" target="_blank"><i> #OuvreLesPortes</i></a></section>
 	</body>
 	<script type="text/javascript">
 		var i;
