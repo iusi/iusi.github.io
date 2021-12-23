@@ -1,99 +1,169 @@
 <!DOCTYPE html>
-<html lang="">
+<html>
 	<head>
-		<meta charset="utf-8">
-		<title>今天给领导磕头了吗</title>
-		<meta name="theme-color" content="#000000"/>
 		<meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui" charset="utf-8">
+		<title>Moon</title>
 		<style type="text/css">
-			html,body,section{
-				margin: 0;
-			}
-			a{
-				color: #ffdd76;
-			}
-			a:focus{
-				border: dashed 3px #ffdd76;
-			}
-			body{
-				color: white;
-				font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-				height: 100vh;
-				background-color: #d0556a;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-			section{
-				margin-left: 10vw;
-				margin-right: 10vw;
-			}
-			.en, .zh, .fr, #others{
+			.eng, .ch{
 				display: none;
 			}
-			@media (prefers-color-scheme: dark){
-				body{
-					background-color: #2b2627;
-					color: #edede6;
+			:root{
+				--darkbg: #15171a;
+				--darkcolor: #e1e1e1;
+			}
+			body{
+				margin: 0;
+				height: 100vh;
+				font-family: PingFangSC-Regular, sans-serif;
+			}
+			html::-webkit-scrollbar{
+				display: none;
+			}
+			html{
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+			}
+			@media (orientation:landscape){
+				section img{
+					object-fit: contain;
 				}
-				a{
-					color: #ecbb26;
+				footer{
+					padding: 5vh 5vw;
+					justify-content: center;
+				}
+				footer a{
+					margin: 0 2vw;
 				}
 			}
-			@media (orientation: landscape){
+			@media (orientation:portrait){
 				section{
-					font-size:calc(2em + 1vw);
+					min-height: 90vh;
+				}
+				section img{
+					object-fit: cover;
+				}
+				footer{
+					padding: 0 5vw;
+					min-height: 20vh;
+					justify-content: space-around;
 				}
 			}
-			@media (orientation: portrait){
-				section{
-					letter-spacing: 1px;
-					line-height: calc(1em + 3vw);
-					margin-top: calc(-2em - 1vw - 5vh);
-					text-align: center;
-					font-size: calc(2em + 1vw);
-				}
-				section span{
-					white-space: nowrap;
-				}
+			header{
+				height: 10vh;
+				background-color: #25282f;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+				align-items: center;
+				position: sticky;
+				position: -webkit-sticky;
+				top: 0;
+			}
+			header:first-child{
+				font-size: larger;
+				padding-left: 10px;
+				color: #c6c7cc;
+			}
+			#toggle{
+				margin-top: 2vh;
+				padding-right: 10px;
+			}
+			section{
+				background-color: var(--darkbg);
+				display: flex;
+				flex-direction: column;
+				color: var(--darkcolor);
+				font-size: x-large;
+				align-items: center;
+				padding-top: 10vh;
+			}
+			section img{
+				width: 90vw;
+				height: 60vh;
+				border-radius: 6vw;
+				transition: opacity 1s, width 100ms;
+				opacity: 0;
+			}
+			section::after{
+				margin-top: 20vh;
+				content: " ";
+				height: 1px;
+				width: 90vw;
+				background-color: grey;
+			}
+			#moon{
+				height: 9vh;
+			}
+			footer{
+				background-color: var(--darkbg);
+				color: var(--darkcolor);
+				display: flex;
+				flex-direction: row nowrap;
+				align-content: flex-start;
+			}
+			footer::after{
+				content: "";
+				display: inline-block;
+			}
+			a{
+				color: var(--darkcolor);
+			}
+			footer img{
+				filter: invert(99%) sepia(4%) saturate(139%) hue-rotate(158deg) brightness(112%) contrast(76%);
+				padding: 0 5px;
+				height: 15px;
 			}
 		</style>
 	</head>
-	<script type="text/javascript">
-		var language = navigator.language
-	</script>
 	<body>
-		<section lang="zh-CN" class="zh" id="others">
-			我们需要一个开放的<span>校园</span> <br><a href="https://s.weibo.com/weibo/%25E5%25A4%25A7%25E5%25AD%25A6%25E8%25A7%25A3%25E5%25B0%2581" target="_blank"><i> #打开校门</i></a><br><a href="https://www.zhihu.com/question/450811246"><i> #开放用电</i></a>
+		<header><span>The Moon</span> <span id="toggle"><img src="moon.svg" id="moon"></span></header>
+		<section>
+			<span>Dec, 18</span>
+			<img src="https://s2.loli.net/2021/12/23/S5OEDWI8GCoikma.jpg" id="mainpic">
 		</section>
-		<section lang="en" class="en">
-			We want to <span>be free</span> from confinement.<br> <a href="https://s.weibo.com/weibo/%25E5%25A4%25A7%25E5%25AD%25A6%25E8%25A7%25A3%25E5%25B0%2581" target="_blank"><i> #OpenTheCampus</i></a><br><a href="https://www.zhihu.com/question/450811246"><i> #NoCut-Off</i></a>
-		</section>
-		<section lang="fr" class="fr">Nous avons besoin d'un <span>campus libre.<br></span><a href="https://s.weibo.com/weibo/%25E5%25A4%25A7%25E5%25AD%25A6%25E8%25A7%25A3%25E5%25B0%2581" target="_blank"><i> #OuvreLesPortes</i></a><a href="https://www.zhihu.com/question/450811246"><i> NeCouperL'électricité</i></a></section>
+		<footer>
+			<a href="https://www.yuque.com/maybush/moon" target="_blank" class="eng"><img src="history.svg" >Archive</a>
+			<a href="https://www.yuque.com/maybush/moon" target="_blank" class="ch"><img src="history.svg">历史存档</a>|
+			<a href="about.html" class="eng"><img src="info.svg">About</a> <a href="about.html" class="ch"><img src="info.svg">关于</a>|
+			<a href="mailto:maybush@foxmail.com" class="eng"><img src="mail.svg">Contact</a> <a href="mailto:maybush@foxmail.com" class="ch"><img src="mail.svg" >联系</a>
+		</footer>
 	</body>
-	<script type="text/javascript">
-		var i;
-		var english = document.getElementsByClassName("en");
-		var chinese = document.getElementsByClassName("zh");
-		var french = document.getElementsByClassName("fr");
-		switch(language){
-		case 'en': case 'en-US': case 'en-us': case 'en-CA': case 'en-ca': case 'en-GB': case 'en-gb':
-		for (i=0; i< english.length; i++){
-			english[i].style.display = "block";
-		}
-		break;
-		case 'zh': case 'zh-CN': case 'zh-cn': case 'zh-Hans':
-		for (i=0; i< chinese.length; i++){
-			chinese[i].style.display = "block";
-		}
-		break;
-		case 'fr': case 'fr-FR': case 'fr-fr': case 'fr-CA': case 'fr-ca':
-		for (i=0; i< french.length; i++){
-			french[i].style.display = "block";
-		}
-		break;
-		default:
-		document.getElementById('others').style.display = "block";
-		}
+	<script type="text/javascript" async>
+			var i;
+			var english = document.getElementsByClassName("eng");
+			var chinese = document.getElementsByClassName("ch");
+			var language = navigator.language;
+			//alert(language)
+			switch(language){ 
+			  case 'en':
+			  case 'en-US': 
+			  case 'en-us':
+				for (i=0; i< english.length; i++){
+				  english[i].style.display = "block"; 
+				}
+			   break;
+			  case 'zh':
+			  case 'zh-Hans':
+			  case 'zh-CN':
+			  case 'zh-cn':
+				for (i=0; i< chinese.length; i++){ 
+				  chinese[i].style.display = "block"; 
+				}
+			  break;
+			  default:
+				for (i=0; i< english.length; i++){
+				  english[i].style.display = "block"; 
+				}
+			}
 	</script>
+	<script type="text/javascript">
+		window.addEventListener('load', function() {
+			document.getElementById("mainpic").setAttribute("style","opacity:1; -moz-opacity:1; filter:alpha(opacity=100)");
+})
+	</script>
+	<!--<script type="text/javascript" defer>
+		$( document ).ready(function(){
+			$("#mainpic").css( "opacity", "1" );
+});			//Jquery dependent
+	</script>-->
 </html>
