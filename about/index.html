@@ -29,7 +29,6 @@
 				}
 				#note{
 					margin-top: 30vh;
-					display: none;
 				}
 			}
 			@media (orientation:portrait){
@@ -49,7 +48,6 @@
 				}
 				#note{
 					margin-top: 20vh;
-					display: none;
 				}
 			}
 			header{
@@ -94,11 +92,9 @@
 	<body>
 		<header><span><a href="../" style="text-decoration: none;">The Moon</a></span> <span id="toggle"><img src="../moon.svg" id="moon"></span></header>
 		<section>
-			<h3 class="ch">欢迎每一位来到这里的朋友：</h3><h3 class="eng">Welcome to <i>The Moon</i>...</h3>
+			<h3 class="ch">Hi：</h3><h3 class="eng">Welcome to <i>The Moon</i>...</h3>
 			<p class="ch">我不一定能做到每天上线更新，但最迟一周更一次。所有历史照片，都存在了<a href="https://www.yuque.com/maybush/moon">语雀</a>上面。</p>
-			<p class="eng">Where I share recent pictures of moon(mostly taken by me), updated at least once a week. <a href="https://www.yuque.com/maybush/moon">View history.</a></p>
-			<p class="ch">留言/分享，欢迎通过邮件与我联系: <i><a href="mailto:maybush@foxmail.com?subject = theMoon">maybush@foxmail.com</a></i></p>
-			<p class="eng">Leave a comment/submit a picture: Email me at <i><a href="mailto:maybush@foxmail.com?subject = theMoon">maybush@foxmail.com</a></i></p>
+			<p class="eng">Where I share recent pictures of moon, updated at least once a week. <a href="https://www.yuque.com/maybush/moon">View history.</a></p>
 			<p id="note">楠楠姐姐，你还好嘛？不开心的时候，就来这里看看我这面的月亮吧 <3 </p>
 		</section>
 	</body>
@@ -108,7 +104,6 @@ var english = document.getElementsByClassName("eng");
 var chinese = document.getElementsByClassName("ch");
 var language = navigator.language; //监测浏览器语言
 //alert(language)
-
 switch(language){ 
   case 'en':
   case 'en-US': 
@@ -129,7 +124,6 @@ switch(language){
 	for (i=0; i< english.length; i++){  //English as default language
 	  english[i].style.display = "block"; 
 	}
-   
 }
 	</script>
 </html>
