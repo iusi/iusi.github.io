@@ -1,172 +1,49 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui" charset="utf-8">
-		<title>Moon</title>
-		<style type="text/css">
-			.eng, .ch{
-				display: none;
-			}
-			:root{
-				--darkbg: #15171a;
-				--darkcolor: #e1e1e1;
-			}
-			body{
-				margin: 0;
-				height: 100vh;
-				font-family: PingFangSC-Regular, sans-serif;
-				background-color: var(--darkbg);
-			}
-			html::-webkit-scrollbar{
-				display: none;
-			}
-			html{
-				-ms-overflow-style: none;
-				scrollbar-width: none;
-			}
-			@media (orientation:landscape){
-				section img{
-					object-fit: contain;
-				}
-				footer{
-					padding: 5vh 5vw;
-					justify-content: center;
-				}
-				footer a{
-					margin: 0 2vw;
-				}
-			}
-			@media (orientation:portrait){
-				section{
-					min-height: 90vh;
-				}
-				section img{
-					object-fit: cover;
-				}
-				footer{
-					padding: 0 5vw;
-					min-height: 20vh;
-					justify-content: space-around;
-				}
-			}
-			header{
-				height: 10vh;
-				background-color: #25282f;
-				display: flex;
-				flex-flow: row nowrap;
-				justify-content: space-between;
-				align-items: center;
-				position: sticky;
-				position: -webkit-sticky;
-				top: 0;
-			}
-			header:first-child{
-				font-size: larger;
-				padding-left: 10px;
-				color: #c6c7cc;
-			}
-			#toggle{
-				margin-top: 2vh;
-				padding-right: 10px;
-			}
-			section{
-				background-color: var(--darkbg);
-				display: flex;
-				flex-direction: column;
-				color: var(--darkcolor);
-				font-size: x-large;
-				align-items: center;
-				padding-top: 10vh;
-			}
-			section img{
-				width: 90vw;
-				height: 60vh;
-				border-radius: 6vw;
-				transition: opacity 1s, width 100ms;
-				opacity: 0;
-			}
-			section span{
-				padding: 10px 10vw;
-			}
-			section::after{
-				margin-top: 20vh;
-				content: " ";
-				height: 1px;
-				width: 90vw;
-				background-color: grey;
-			}
-			#moon{
-				height: 9vh;
-			}
-			footer{
-				background-color: var(--darkbg);
-				color: var(--darkcolor);
-				display: flex;
-				flex-direction: row nowrap;
-				align-content: flex-start;
-			}
-			a{
-				color: var(--darkcolor);
-			}
-			footer img{
-				filter: invert(99%) sepia(4%) saturate(139%) hue-rotate(158deg) brightness(112%) contrast(76%);
-				padding: 0 5px;
-				height: 15px;
-			}
-			footer{
-				padding-top: 4vh;
-			}
-		</style>
+		<title>archive</title>
 	</head>
-	<body>
-		<header><span><a href="/" style="text-decoration: none;">The Moon</a></span><span id="toggle"><img src="moon.svg" id="moon"></span></header>
-		<section>
-			<span>Apr 17</span><span></span>
-			<img src="moon.jpg" id="mainpic">
-		</section>
-		<footer>
-			<a href="https://www.yuque.com/maybush/moon" target="_blank" class="eng"><img src="history.svg" >Archive</a>
-			<a href="https://www.yuque.com/maybush/moon" target="_blank" class="ch"><img src="history.svg">历史存档</a>|
-			<a href="about/" class="eng"><img src="info.svg">About</a> <a href="about/" class="ch"><img src="info.svg">关于</a>|
-			<a href="mailto:hi@urmymoon.com" class="eng"><img src="mail.svg">Contact</a> <a href="mailto:hi@urmymoon.com" class="ch"><img src="mail.svg" >联系</a>
-		</footer>
-	</body>
-	<script type="text/javascript" async>
-			var i;
-			var english = document.getElementsByClassName("eng");
-			var chinese = document.getElementsByClassName("ch");
-			var language = navigator.language;
-			//alert(language)
-			switch(language){ 
-			  case 'en':
-			  case 'en-US': 
-			  case 'en-us':
-				for (i=0; i< english.length; i++){
-				  english[i].style.display = "block"; 
-				}
-			   break;
-			  case 'zh':
-			  case 'zh-Hans':
-			  case 'zh-CN':
-			  case 'zh-cn':
-				for (i=0; i< chinese.length; i++){ 
-				  chinese[i].style.display = "block"; 
-				}
-			  break;
-			  default:
-				for (i=0; i< english.length; i++){
-				  english[i].style.display = "block"; 
-				}
+	<style type="text/css">
+		body{
+			font-family: -apple-system,"Google Sans Text", BlinkMacSystemFont, sans-serif;
+			margin: 0;
+			background-color: #f2f6fc;
+			display: flex;
+			height: 100vh;
+			width: 100vw;
+			justify-content: center;
+			align-items: center;
+		}
+		p{
+			line-height: 1.7em;
+			color:#041e50;
+			font-size: 2em;
+			padding: 0 30vw 0vh 10vw;
+		}
+		span{
+			white-space: nowrap;
+		}
+		@media (prefers-color-scheme: dark){
+			body{
+				background-color:#141414 ;
 			}
-	</script>
-	<script type="text/javascript">
-		window.addEventListener('load', function() {
-			document.getElementById("mainpic").setAttribute("style","opacity:1; -moz-opacity:1; filter:alpha(opacity=100)");
-})
-	</script>
-	<!--<script type="text/javascript" defer>
-		$( document ).ready(function(){
-			$("#mainpic").css( "opacity", "1" );
-});			//Jquery dependent
-	</script>-->
+			p{
+				color: #cfd1d5;
+			}
+		}
+		@media (orientation:portrait){
+			p{
+				line-height: 1.3em;
+				font-size: 1.8em;
+				padding: 0 20vw 20vh 20vw !important;
+			}
+			code{
+				display: none;
+			}
+	</style>
+	<body>
+		<p>这个世界又<span>不喜欢我</span>，<br>我为什么要<span>喜欢</span><span>这个世界。</span><code>(・へ・)</code></p>
+	</body>
 </html>
