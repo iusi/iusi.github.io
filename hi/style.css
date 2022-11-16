@@ -5,6 +5,7 @@ body {
     overflow-x: hidden;
     padding-bottom: 20vh;
     font-size: large;
+    font-family: -apple-system, BlinkMacSystemFont,'Microsoft Yahei',sans-serif;
   }
   h1{
     margin: 0;
