@@ -21,6 +21,11 @@ body {
     width:100vw;
     gap:2vw;
   }
+ #info{
+    padding: 10px 10vw;
+    background-color: #fbcda5;
+    color: #482303;
+  }
   .first-line{
     display: block;
     padding-bottom: 1em;
